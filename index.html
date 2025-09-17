@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enes Mahmut Taşdemir - Avukat</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+      // Sayfa çizilmeden önce kontrol et: Eğer animasyon daha önce oynatıldıysa,
+      // HTML etiketine "animation-played" class'ını ekle.
+      if (sessionStorage.getItem('animationPlayed')) {
+        document.documentElement.classList.add('animation-played');
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen">
+        <div class="text-center">
+            <h1 class="handwriting-title">Enes Mahmut Taşdemir</h1>
+            <p class="subtitle-fade text-2xl mt-6" style="transform: translateY(20px);">AVUKAT</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">EMT</span>
+                    </div>
+                    <div class="hidden md:block">
+                        <h3 class="text-white font-semibold">Enes M. Taşdemir</h3>
+                        <p class="text-xs text-gray-400">Avukat</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex space-x-8">
+                    <li><a href="#home" class="text-gray-300 hover:text-yellow-400 transition-colors">Ana Sayfa</a></li>
+                    <li><a href="#about" class="text-gray-300 hover:text-yellow-400 transition-colors">Hakkımda</a></li>
+                    <li><a href="#services" class="text-gray-300 hover:text-yellow-400 transition-colors">Hizmetler</a></li>
+                    <li><a href="#expertise" class="text-gray-300 hover:text-yellow-400 transition-colors">Uzmanlık Alanları</a></li>
+                    <li><a href="#contact" class="text-gray-300 hover:text-yellow-400 transition-colors">İletişim</a></li>
+                </ul>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="#contact" class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-dark px-6 py-2 rounded-full font-semibold hover:shadow-lg hover:shadow-yellow-400/30 transition-all">
+                        Bana Danışın
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-gray-900/95 backdrop-blur-lg">
+            <ul class="px-6 py-4 space-y-3">
+                <li><a href="#home" class="block text-gray-300 hover:text-yellow-400 py-2">Ana Sayfa</a></li>
+                <li><a href="#about" class="block text-gray-300 hover:text-yellow-400 py-2">Hakkımda</a></li>
+                <li><a href="#services" class="block text-gray-300 hover:text-yellow-400 py-2">Hizmetler</a></li>
+                <li><a href="#expertise" class="block text-gray-300 hover:text-yellow-400 py-2">Uzmanlık Alanları</a></li>
+                <li><a href="#contact" class="block text-gray-300 hover:text-yellow-400 py-2">İletişim</a></li>
+                <li class="pt-4">
+                    <a href="#contact" class="block bg-gradient-to-r from-yellow-400 to-yellow-600 text-center text-dark px-6 py-2 rounded-full font-semibold">
+                        Ücretsiz Danışın
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center relative">
+        <div class="hero-pattern"></div>
+        <div class="container mx-auto px-6 py-20 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="text-white">
+                    <div class="inline-block px-4 py-2 bg-yellow-400/10 rounded-full mb-6">
+                        <span class="text-yellow-400 text-sm font-semibold">✨ 15+ Yıllık Deneyim</span>
+                    </div>
+                    <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Hukuki <span class="text-yellow-400">Çözümleriniz</span> İçin Güvenilir Adres
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                        Deneyimli kadromuz ve müvekkil odaklı yaklaşımımızla, tüm hukuki süreçlerinizde yanınızdayız.
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap gap-4 mb-12">
+                        <a href="#contact" class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-dark px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:shadow-yellow-400/30 transition-all transform hover:scale-105">
+                            <i class="fas fa-phone-alt mr-2"></i> Hemen Arayın
+                        </a>
+                        <a href="#services" class="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-dark transition-all">
+                            <i class="fas fa-briefcase mr-2"></i> Hizmetlerimiz
+                        </a>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <h3 class="text-3xl font-bold text-yellow-400">500+</h3>
+                            <p class="text-gray-400">Başarılı Dava</p>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-3xl font-bold text-yellow-400">98%</h3>
+                            <p class="text-gray-400">Müvekkil Memnuniyeti</p>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-3xl font-bold text-yellow-400">15+</h3>
+                            <p class="text-gray-400">Yıl Deneyim</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content - Image/Illustration -->
+                <div class="relative">
+                    <div class="glass-card rounded-2xl p-8 text-center">
+                        <div class="w-64 h-64 mx-auto bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 rounded-full flex items-center justify-center mb-6 float-animation">
+                            <i class="fas fa-balance-scale text-8xl text-yellow-400"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Enes Mahmut Taşdemir</h3>
+                        <p class="text-yellow-400 font-semibold mb-2">Avukat / Hukuk Müşaviri</p>
+                        <p class="text-gray-400">İstanbul Barosu</p>
+                        
+                        <div class="flex justify-center space-x-4 mt-6">
+                            <a href="#" class="w-10 h-10 bg-yellow-400/10 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-dark transition-all">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-yellow-400/10 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-dark transition-all">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-yellow-400/10 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-dark transition-all">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">Hakkımda</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                <div class="order-2 lg:order-1">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6">
+                        Merhaba, Ben <span class="text-yellow-500">Enes Mahmut Taşdemir</span>
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        15 yılı aşkın süredir hukuk alanında faaliyet göstermekteyim. İstanbul Üniversitesi Hukuk Fakültesi'nden mezun olduktan sonra, kariyerime İstanbul'un önde gelen hukuk bürolarında başladım.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Müvekkillerime sadece hukuki danışmanlık değil, aynı zamanda stratejik çözümler sunarak, haklarını en iyi şekilde korumayı hedefliyorum. Her davayı kendi davam gibi sahipleniyor, adaletin tecellisi için var gücümle çalışıyorum.
+                    </p>
+
+                    <!-- Skills -->
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-yellow-500 text-xl"></i>
+                            <span class="text-gray-700">Medeni Hukuk</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-yellow-500 text-xl"></i>
+                            <span class="text-gray-700">Ticaret Hukuku</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-yellow-500 text-xl"></i>
+                            <span class="text-gray-700">İş Hukuku</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-yellow-500 text-xl"></i>
+                            <span class="text-gray-700">Gayrimenkul Hukuku</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 text-dark px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all">
+                        CV İndir <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="order-1 lg:order-2">
+                    <div class="relative">
+                        <div class="w-full h-96 bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 rounded-2xl"></div>
+                        <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-award text-2xl text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Sertifikalı Uzman</h4>
+                                    <p class="text-gray-600">İstanbul Barosu</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+   <!-- Services Section -->
+<section id="services" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">Hizmetlerimiz</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto mb-8"></div>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                Profesyonel ekibimizle, tüm hukuki ihtiyaçlarınıza özel çözümler sunuyoruz.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <!-- 1. Yabancılar ve Vatandaşlık Hukuku -->
+            <div class="service-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-passport text-2xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">Yabancılar ve Vatandaşlık Hukuku</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    Oturma izni, çalışma izni, vatandaşlık başvuruları ve yabancıların hukuki işlemleri.
+                </p>
+                <a href="service-detail-Yabancı.html" class="text-yellow-500 font-semibold hover:text-yellow-600 transition-colors text-sm">
+                    Detaylı Bilgi <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 2. Fikri Mülkiyet Hukuku -->
+            <div class="service-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-lightbulb text-2xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">Fikri Mülkiyet Hukuku</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    Marka, patent, telif hakları ve endüstriyel tasarım tescili ve korunması.
+                </p>
+                <a href="service-detail-Fikri_Mülkiyet_Hukuku.html" class="text-yellow-500 font-semibold hover:text-yellow-600 transition-colors text-sm">
+                    Detaylı Bilgi <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 3. Sözleşmeler Hukuku -->
+            <div class="service-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-file-contract text-2xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">Sözleşmeler Hukuku</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    Her türlü ticari ve bireysel sözleşmenin hazırlanması, incelenmesi ve müzakeresi.
+                </p>
+                <a href="#contact" class="text-yellow-500 font-semibold hover:text-yellow-600 transition-colors text-sm">
+                    Detaylı Bilgi <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 4. İş ve Sosyal Güvenlik Hukuku -->
+            <div class="service-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-user-tie text-2xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">İş ve Sosyal Güvenlik Hukuku</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    İşçi-işveren uyuşmazlıkları, kıdem-ihbar tazminatları ve SGK işlemleri.
+                </p>
+                <a href="#contact" class="text-yellow-500 font-semibold hover:text-yellow-600 transition-colors text-sm">
+                    Detaylı Bilgi <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 5. Şirketler ve Ticaret Hukuku -->
+            <div class="service-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-building text-2xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">Şirketler ve Ticaret Hukuku</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    Şirket kuruluşu, birleşme-devralma, ticari davalar ve kurumsal danışmanlık.
+                </p>
+                <a href="#contact" class="text-yellow-500 font-semibold hover:text-yellow-600 transition-colors text-sm">
+                    Detaylı Bilgi <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 6. Rekabet Hukuku -->
+            <div class="service-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-chart-line text-2xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">Rekabet Hukuku</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    Rekabet ihlalleri, haksız rekabet davaları ve Rekabet Kurumu süreçleri.
+                </p>
+                <a href="#contact" class="text-yellow-500 font-semibold hover:text-yellow-600 transition-colors text-sm">
+                    Detaylı Bilgi <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 7. Basın ve Medya Hukuku -->
+            <div class="service-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-newspaper text-2xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">Basın ve Medya Hukuku</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    Kişilik hakları ihlalleri, manevi tazminat ve yayın yasakları.
+                </p>
+                <a href="#contact" class="text-yellow-500 font-semibold hover:text-yellow-600 transition-colors text-sm">
+                    Detaylı Bilgi <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 8. Tüketici Hukuku -->
+            <div class="service-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-shopping-cart text-2xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">Tüketici Hukuku</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    Tüketici hakları, ayıplı mal ve hizmet davaları, hakem heyeti başvuruları.
+                </p>
+                <a href="#contact" class="text-yellow-500 font-semibold hover:text-yellow-600 transition-colors text-sm">
+                    Detaylı Bilgi <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 9. Ceza ve İnfaz Hukuku -->
+            <div class="service-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-gavel text-2xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">Ceza ve İnfaz Hukuku</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    Ceza davaları savunması, infaz takibi ve denetimli serbestlik işlemleri.
+                </p>
+                <a href="#contact" class="text-yellow-500 font-semibold hover:text-yellow-600 transition-colors text-sm">
+                    Detaylı Bilgi <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 10. İnsan Hakları Hukuku -->
+            <div class="service-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-hand-holding-heart text-2xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">İnsan Hakları Hukuku</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    AİHM başvuruları, Anayasa Mahkemesi bireysel başvuruları ve hak ihlalleri.
+                </p>
+                <a href="#contact" class="text-yellow-500 font-semibold hover:text-yellow-600 transition-colors text-sm">
+                    Detaylı Bilgi <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 11. İdare ve Vergi Hukuku -->
+            <div class="service-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-landmark text-2xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">İdare ve Vergi Hukuku</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    İdari davalar, iptal ve tam yargı davaları, vergi uyuşmazlıkları.
+                </p>
+                <a href="#contact" class="text-yellow-500 font-semibold hover:text-yellow-600 transition-colors text-sm">
+                    Detaylı Bilgi <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 12. Dernekler ve Vakıflar Hukuku -->
+            <div class="service-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-users text-2xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">Dernekler ve Vakıflar Hukuku</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    Dernek ve vakıf kuruluşu, tüzük hazırlama ve hukuki danışmanlık.
+                </p>
+                <a href="#contact" class="text-yellow-500 font-semibold hover:text-yellow-600 transition-colors text-sm">
+                    Detaylı Bilgi <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 13. Gayrimenkul Hukuku -->
+            <div class="service-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-home text-2xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">Gayrimenkul Hukuku</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    Tapu iptali-tescili, kat mülkiyeti, kira uyuşmazlıkları ve kamulaştırma.
+                </p>
+                <a href="#contact" class="text-yellow-500 font-semibold hover:text-yellow-600 transition-colors text-sm">
+                    Detaylı Bilgi <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 14. Aile Hukuku -->
+            <div class="service-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-heart text-2xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">Aile Hukuku</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    Boşanma, nafaka, velayet, mal paylaşımı ve miras davaları.
+                </p>
+                <a href="#contact" class="text-yellow-500 font-semibold hover:text-yellow-600 transition-colors text-sm">
+                    Detaylı Bilgi <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 15. İcra ve İflas Hukuku -->
+            <div class="service-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-balance-scale text-2xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">İcra ve İflas Hukuku</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    İcra takipleri, haciz işlemleri, konkordato ve iflas davaları.
+                </p>
+                <a href="#contact" class="text-yellow-500 font-semibold hover:text-yellow-600 transition-colors text-sm">
+                    Detaylı Bilgi <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 16. Tazminat Hukuku -->
+            <div class="service-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-hand-holding-usd text-2xl text-white"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">Tazminat Hukuku</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    Maddi-manevi tazminat, trafik kazası, iş kazası ve malpraktis davaları.
+                </p>
+                <a href="#contact" class="text-yellow-500 font-semibold hover:text-yellow-600 transition-colors text-sm">
+                    Detaylı Bilgi <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Expertise Areas -->
+    <section id="expertise" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">Uzmanlık Alanları</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto mb-8"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-4">
+                    <!-- Accordion Item 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="accordion-btn w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors flex justify-between items-center" onclick="toggleAccordion(this)">
+                            <div class="flex items-center">
+                                <i class="fas fa-briefcase text-yellow-500 text-xl mr-4"></i>
+                                <h3 class="text-lg font-semibold text-gray-800">Ticaret Hukuku</h3>
+                            </div>
+                            <i class="fas fa-chevron-down text-gray-400 transition-transform accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content hidden px-6 pb-4">
+                            <p class="text-gray-600">
+                                Şirket kuruluşu, birleşme ve devralmalar, ticari sözleşmeler, konkordato ve iflas işlemleri konularında uzman hukuki destek sağlıyoruz.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="accordion-btn w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors flex justify-between items-center" onclick="toggleAccordion(this)">
+                            <div class="flex items-center">
+                                <i class="fas fa-user-tie text-yellow-500 text-xl mr-4"></i>
+                                <h3 class="text-lg font-semibold text-gray-800">İş Hukuku</h3>
+                            </div>
+                            <i class="fas fa-chevron-down text-gray-400 transition-transform accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content hidden px-6 pb-4">
+                            <p class="text-gray-600">
+                                İşçi ve işveren hakları, iş sözleşmeleri, kıdem ve ihbar tazminatları, iş kazaları ve meslek hastalıkları davalarında profesyonel hizmet veriyoruz.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="accordion-btn w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors flex justify-between items-center" onclick="toggleAccordion(this)">
+                            <div class="flex items-center">
+                                <i class="fas fa-heart text-yellow-500 text-xl mr-4"></i>
+                                <h3 class="text-lg font-semibold text-gray-800">Aile Hukuku</h3>
+                            </div>
+                            <i class="fas fa-chevron-down text-gray-400 transition-transform accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content hidden px-6 pb-4">
+                            <p class="text-gray-600">
+                                Boşanma, nafaka, velayet, mal paylaşımı, evlat edinme ve miras hukuku konularında danışmanlık ve dava takibi hizmeti sunuyoruz.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 4 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="accordion-btn w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors flex justify-between items-center" onclick="toggleAccordion(this)">
+                            <div class="flex items-center">
+                                <i class="fas fa-landmark text-yellow-500 text-xl mr-4"></i>
+                                <h3 class="text-lg font-semibold text-gray-800">Gayrimenkul Hukuku</h3>
+                            </div>
+                            <i class="fas fa-chevron-down text-gray-400 transition-transform accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content hidden px-6 pb-4">
+                            <p class="text-gray-600">
+                                Tapu iptali ve tescili, kat mülkiyeti, kentsel dönüşüm, kamulaştırma ve kira uyuşmazlıkları konularında hukuki destek sağlıyoruz.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 5 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="accordion-btn w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors flex justify-between items-center" onclick="toggleAccordion(this)">
+                            <div class="flex items-center">
+                                <i class="fas fa-shield-alt text-yellow-500 text-xl mr-4"></i>
+                                <h3 class="text-lg font-semibold text-gray-800">Ceza Hukuku</h3>
+                            </div>
+                            <i class="fas fa-chevron-down text-gray-400 transition-transform accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content hidden px-6 pb-4">
+                            <p class="text-gray-600">
+                                Her türlü ceza davalarında savunma ve müdafi avukatlığı, uzlaşma ve arabuluculuk işlemlerinde profesyonel hukuki temsil.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">Müvekkil Yorumları</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto mb-8"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">
+                        "Enes Bey'in profesyonel yaklaşımı ve hukuki bilgisi sayesinde davamı kazandım. Kendisine çok teşekkür ederim."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Ahmet K.</h4>
+                            <p class="text-sm text-gray-500">İş Davası</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">
+                        "Çok zor bir boşanma sürecinde yanımda oldu. Her aşamada bilgilendirdi ve haklarımı korudu."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Ayşe D.</h4>
+                            <p class="text-sm text-gray-500">Aile Hukuku</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">
+                        "Şirketimizin tüm hukuki işlemlerini güvenle teslim ediyoruz. Mükemmel bir hukuk danışmanı."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Mehmet T.</h4>
+                            <p class="text-sm text-gray-500">Ticaret Hukuku</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">İletişim</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto mb-8"></div>
+                <p class="text-gray-300 max-w-2xl mx-auto">
+                    Hukuki sorunlarınız için hemen bizimle iletişime geçin. Size en kısa sürede dönüş yapacağız.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Contact Form -->
+                <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-white mb-6">Mesaj Gönderin</h3>
+                    <form id="contactForm">
+                        <div class="grid md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="block text-gray-300 mb-2">Adınız Soyadınız</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-yellow-400 focus:outline-none transition-colors" placeholder="Adınız Soyadınız">
+                            </div>
+                            <div>
+                                <label class="block text-gray-300 mb-2">E-posta</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-yellow-400 focus:outline-none transition-colors" placeholder="ornek@email.com">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-300 mb-2">Telefon</label>
+                            <input type="tel" name="phone" required class="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-yellow-400 focus:outline-none transition-colors" placeholder="0555 555 55 55">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-300 mb-2">Konu</label>
+                            <select name="subject" class="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors">
+                                <option value="">Konu Seçiniz</option>
+                                <option value="ticaret">Ticaret Hukuku</option>
+                                <option value="is">İş Hukuku</option>
+                                <option value="aile">Aile Hukuku</option>
+                                <option value="gayrimenkul">Gayrimenkul Hukuku</option>
+                                <option value="ceza">Ceza Hukuku</option>
+                                <option value="diger">Diğer</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-300 mb-2">Mesajınız</label>
+                            <textarea name="message" rows="4" required class="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-yellow-400 focus:outline-none transition-colors resize-none" placeholder="Mesajınızı buraya yazın..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-yellow-400 to-yellow-600 text-dark px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-yellow-400/30 transition-all">
+                            <i class="fas fa-paper-plane mr-2"></i> Mesaj Gönder
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="text-white">
+                    <h3 class="text-2xl font-bold mb-6">İletişim Bilgileri</h3>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Ofis Adresi</h4>
+                                <p class="text-gray-300">
+                                    Levent Mahallesi, Büyükdere Caddesi<br>
+                                    No: 123 Kat: 5 Ofis: 501<br>
+                                    Beşiktaş / İstanbul
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-phone text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Telefon</h4>
+                                <p class="text-gray-300">
+                                    +90 (212) 555 00 00<br>
+                                    +90 (555) 555 55 55
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-envelope text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">E-posta</h4>
+                                <p class="text-gray-300">
+                                    info@enesmtasdemir.com<br>
+                                    hukuk@enesmtasdemir.com
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-clock text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Çalışma Saatleri</h4>
+                                <p class="text-gray-300">
+                                    Pazartesi - Cuma: 09:00 - 18:00<br>
+                                    Cumartesi: 10:00 - 14:00<br>
+                                    Pazar: Kapalı
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-4 h-64">
+                        <div class="w-full h-full bg-gray-700/50 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-map-marked-alt text-4xl text-gray-500"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Logo & About -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold">EMT</span>
+                        </div>
+                        <span class="text-white font-semibold">Enes M. Taşdemir</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        15 yıllık deneyimimizle hukuki sorunlarınıza profesyonel çözümler sunuyoruz.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Hızlı Linkler</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-yellow-400 transition-colors text-sm">Ana Sayfa</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-yellow-400 transition-colors text-sm">Hakkımda</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-yellow-400 transition-colors text-sm">Hizmetler</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-yellow-400 transition-colors text-sm">İletişim</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Hizmetlerimiz</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors text-sm">Ticaret Hukuku</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors text-sm">İş Hukuku</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors text-sm">Aile Hukuku</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors text-sm">Ceza Hukuku</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Sosyal Medya</h4>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-gray-900 transition-all">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-gray-900 transition-all">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-gray-900 transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-gray-900 transition-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    © 2024 Enes Mahmut Taşdemir. Tüm hakları saklıdır.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors text-sm">Gizlilik Politikası</a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors text-sm">Kullanım Şartları</a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors text-sm">KVKK</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all opacity-0 pointer-events-none z-40">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
