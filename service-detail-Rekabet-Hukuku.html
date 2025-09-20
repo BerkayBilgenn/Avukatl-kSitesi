@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekabet Hukuku - Enes Mahmut Taşdemir</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="service-detail.css">
+
+</head>
+<body>
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-gray-900/95 backdrop-blur-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">EMT</span>
+                    </div>
+                    <div class="hidden md:block">
+                        <h3 class="text-white font-semibold">Enes M. Taşdemir</h3>
+                        <p class="text-xs text-gray-400">Avukat</p>
+                    </div>
+                </div>
+
+                <ul class="hidden lg:flex space-x-8">
+                    <li><a href="index.html" class="text-gray-300 hover:text-yellow-400 transition-colors">Ana Sayfa</a></li>
+                    <li><a href="index.html#about" class="text-gray-300 hover:text-yellow-400 transition-colors">Hakkımda</a></li>
+                    <li><a href="index.html#services" class="text-yellow-400 transition-colors">Hizmetler</a></li>
+                    <li><a href="index.html#expertise" class="text-gray-300 hover:text-yellow-400 transition-colors">Uzmanlık Alanları</a></li>
+                    <li><a href="index.html#contact" class="text-gray-300 hover:text-yellow-400 transition-colors">İletişim</a></li>
+                </ul>
+
+                <div class="hidden lg:block">
+                    <a href="index.html#contact" class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-dark px-6 py-2 rounded-full font-semibold hover:shadow-lg hover:shadow-yellow-400/30 transition-all">
+                        Bana Danışın
+                    </a>
+                </div>
+
+                <button id="mobileMenuBtn" class="lg:hidden text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden lg:hidden bg-gray-900/95 backdrop-blur-lg">
+            <ul class="px-6 py-4 space-y-3">
+                <li><a href="index.html" class="block text-gray-300 hover:text-yellow-400 py-2">Ana Sayfa</a></li>
+                <li><a href="index.html#about" class="block text-gray-300 hover:text-yellow-400 py-2">Hakkımda</a></li>
+                <li><a href="index.html#services" class="block text-yellow-400 py-2">Hizmetler</a></li>
+                <li><a href="index.html#expertise" class="block text-gray-300 hover:text-yellow-400 py-2">Uzmanlık Alanları</a></li>
+                <li><a href="index.html#contact" class="block text-gray-300 hover:text-yellow-400 py-2">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="service-hero pt-32 pb-20">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center text-white">
+                <div class="inline-block px-4 py-2 bg-yellow-400/10 rounded-full mb-6">
+                    <span class="text-yellow-400 text-sm font-semibold">Hukuki Hizmetlerimiz</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-4">Rekabet Hukuku</h1>
+                <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                    Pazarın adil ve dengeli işleyişi için rekabet ihlallerine karşı hukuki koruma
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-2xl shadow-lg p-6 sticky top-24">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 pb-3 border-b border-gray-200">Hizmetlerimiz</h3>
+                        <nav class="space-y-2">
+                            <div class="service-nav-item rounded-lg px-4 py-3 text-sm font-medium text-gray-600 hover:text-white">
+                                <a href="service-detail-Yabanci.html" class="block w-full"><i class="fas fa-passport mr-2"></i> Yabancılar ve Vatandaşlık</a>
+                            </div>
+                            <div class="service-nav-item rounded-lg px-4 py-3 text-sm font-medium text-gray-600 hover:text-white">
+                                <a href="service-detail-Fikri_Mulkiyet_Hukuku.html" class="block w-full"><i class="fas fa-lightbulb mr-2"></i> Fikri Mülkiyet</a>
+                            </div>
+                            <div class="service-nav-item rounded-lg px-4 py-3 text-sm font-medium text-gray-600 hover:text-white">
+                                <a href="service-detail-Sozlesmeler.html" class="block w-full"><i class="fas fa-file-contract mr-2"></i> Sözleşmeler</a>
+                            </div>
+                            <div class="service-nav-item rounded-lg px-4 py-3 text-sm font-medium text-gray-600 hover:text-white">
+                                <a href="service-detail-Is-Hukuku.html" class="block w-full"><i class="fas fa-user-tie mr-2"></i> İş ve Sosyal Güvenlik</a>
+                            </div>
+                            <div class="service-nav-item rounded-lg px-4 py-3 text-sm font-medium text-gray-600 hover:text-white">
+                                <a href="service-detail-Sirketler-Ticaret.html" class="block w-full"><i class="fas fa-building mr-2"></i> Şirketler ve Ticaret</a>
+                            </div>
+                             <div class="service-nav-item active rounded-lg px-4 py-3 text-sm font-medium">
+                                <i class="fas fa-chart-line mr-2"></i> Rekabet Hukuku
+                            </div>
+                            <div class="service-nav-item rounded-lg px-4 py-3 text-sm font-medium text-gray-600 hover:text-white">
+                                <i class="fas fa-home mr-2"></i> Gayrimenkul
+                            </div>
+                        </nav>
+                        
+                        <div class="mt-8 pt-6 border-t border-gray-200">
+                            <a href="index.html#contact" class="block w-full bg-gradient-to-r from-yellow-400 to-yellow-600 text-center text-dark px-4 py-3 rounded-lg font-semibold hover:shadow-lg transition-all">
+                                <i class="fas fa-phone mr-2"></i> Hemen Danışın
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-3">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <div class="image-placeholder h-96 w-full"></div>
+                        
+                        <div class="p-8 content-section">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-6">Rekabet Hukuku Hizmetlerimiz</h2>
+                            
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Serbest piyasa ekonomisinin temel taşı olan rekabetin korunması, hem tüketiciler hem de teşebbüsler için adil bir pazar ortamı yaratır. Rekabet Hukuku alanında uzman ekibimizle, müvekkillerimizin Rekabet Kurumu soruşturmalarında temsil edilmesi, rekabet ihlallerinden doğan davaların takibi ve rekabet hukukuna uyum programlarının oluşturulması gibi konularda hizmet veriyoruz.
+                            </p>
+
+                            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-8">
+                                <p class="text-gray-700 italic">
+                                    "Adil rekabet koşullarını koruyarak ve haksız uygulamalara karşı durarak, işletmenizin pazardaki konumunu hukuki güvence altına alıyoruz."
+                                </p>
+                            </div>
+
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Sunduğumuz Hizmetler</h3>
+                            
+                            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                                <div class="border rounded-lg p-4">
+                                    <h4 class="font-semibold text-gray-800 mb-2">
+                                        <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                        Rekabet Kurumu Soruşturmaları
+                                    </h4>
+                                    <p class="text-gray-600 text-sm">
+                                        Ön araştırma ve soruşturma süreçlerinde savunmaların hazırlanması ve temsil.
+                                    </p>
+                                </div>
+                                
+                                <div class="border rounded-lg p-4">
+                                    <h4 class="font-semibold text-gray-800 mb-2">
+                                        <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                        Rekabet İhlali Davaları
+                                    </h4>
+                                    <p class="text-gray-600 text-sm">
+                                        Rekabetin engellenmesinden kaynaklanan tazminat ve tespit davaları.
+                                    </p>
+                                </div>
+                                
+                                <div class="border rounded-lg p-4">
+                                    <h4 class="font-semibold text-gray-800 mb-2">
+                                        <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                        Birleşme ve Devralma Kontrolü
+                                    </h4>
+                                    <p class="text-gray-600 text-sm">
+                                        Rekabet Kurumu'na yapılacak bildirimler ve izin süreçlerinin yönetimi.
+                                    </p>
+                                </div>
+                                
+                                <div class="border rounded-lg p-4">
+                                    <h4 class="font-semibold text-gray-800 mb-2">
+                                        <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                        Uyum Programları
+                                    </h4>
+                                    <p class="text-gray-600 text-sm">
+                                        Şirketlerin rekabet hukuku mevzuatına uyum sağlaması için eğitim ve danışmanlık.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Detaylı Hizmet Kapsamımız</h3>
+                            
+                            <div class="space-y-4 mb-8">
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">1. Rekabet Soruşturmaları ve Savunma</h4>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Rekabet Kurumu tarafından yürütülen kartel, hakim durumun kötüye kullanılması ve rekabeti sınırlayıcı anlaşma soruşturmalarında müvekkillerimizi temsil ediyoruz. Soruşturma sürecinin her aşamasında (ön araştırma, yerinde inceleme, sözlü savunma) hukuki destek sağlıyor ve etkin savunma stratejileri geliştiriyoruz.
+                                    </p>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">2. Birleşme, Devralma ve Ortak Girişimlerin Bildirimi</h4>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Belirli eşikleri aşan birleşme, devralma ve ortak girişim işlemlerinin Rekabet Kurumu'na bildirilmesi zorunludur. Bu işlemlerin hukuki analizini yaparak bildirim dosyalarını hazırlıyor ve Kurum'dan gerekli izinlerin alınması sürecini yönetiyoruz.
+                                    </p>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">3. Rekabet Hukukuna Uyum Danışmanlığı</h4>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Müvekkillerimizin ticari faaliyetlerini yürütürken rekabet kurallarını ihlal etmelerini önlemek amacıyla özel uyum programları hazırlıyoruz. Şirket içi eğitimler düzenleyerek, distribütörlük ve bayilik anlaşmaları gibi sözleşmelerin rekabet hukuku açısından risk analizini yapıyoruz.
+                                    </p>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">4. Rekabet İhlallerinden Doğan Tazminat Davaları</h4>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Rekabeti kısıtlayıcı eylemler nedeniyle zarara uğrayan müvekkillerimiz adına, ihlali gerçekleştiren teşebbüslere karşı maddi ve manevi tazminat davaları açıyoruz. Bu davalarda, zararın tespiti ve ispatı konularında uzman desteği sağlıyoruz.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="bg-gray-50 rounded-xl p-6 mb-8">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">Neden Bizi Tercih Etmelisiniz?</h3>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
+                                        <span class="text-gray-700">Rekabet Kurumu'nun işleyişi ve karar mekanizmaları hakkında derinlemesine bilgi</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
+                                        <span class="text-gray-700">Karmaşık ekonomik ve hukuki analizler gerektiren soruşturmalarda deneyim</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
+                                        <span class="text-gray-700">Önleyici hukuk anlayışıyla rekabet risklerini proaktif olarak yönetme</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
+                                        <span class="text-gray-700">Uluslararası rekabet hukuku uygulamaları ve güncel mevzuat takibi</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-xl p-8 text-center">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                                    Pazarda Adil Bir Konum Elde Edin
+                                </h3>
+                                <p class="text-gray-800 mb-6">
+                                    Rekabet hukuku ile ilgili tüm soru ve sorunlarınız için uzman ekibimizle iletişime geçin.
+                                </p>
+                                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                    <a href="tel:+902125550000" class="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all">
+                                        <i class="fas fa-phone mr-2"></i> Hemen Arayın
+                                    </a>
+                                    <a href="index.html#contact" class="bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all">
+                                        <i class="fas fa-envelope mr-2"></i> Mesaj Gönderin
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <div class="w-10 h-10 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold">EMT</span>
+                    </div>
+                    <span class="text-white font-semibold">Enes Mahmut Taşdemir - Avukat</span>
+                </div>
+                <p class="text-gray-400 mb-4">
+                    © 2024 Tüm hakları saklıdır.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Service Navigation (Sidebar)
+        document.querySelectorAll('.service-nav-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                // Eğer tıklanan bir link ise, sayfanın yönlenmesine izin ver
+                if (e.target.tagName === 'A') {
+                    return;
+                }
+                
+                // Eğer link değil de div'in kendisine tıklandıysa ve içinde link varsa, linke tıkla
+                const link = this.querySelector('a');
+                if (link) {
+                    window.location.href = link.href;
+                }
+            });
+        });
+
+        // Scroll effect for navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
